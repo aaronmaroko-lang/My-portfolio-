@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+</head>
+
+<body>
+
+    <h1>STUDENT GRADING SYSTEM</h1>
+
+    <form id="gradingForm">
+
+        <label>Student Name:</label>
+        <input type="text" id="studentName" required>
+
+        <h3>Enter Subject Marks</h3>
+
+        <label>Mathematics:</label>
+        <input type="number" id="math" min="0" max="100" required>
+
+        <br><br>
+
+        <label>English:</label>
+        <input type="number" id="english" min="0" max="100" required>
+
+        <br><br>
+
+        <label>Computer Studies:</label>
+        <input type="number" id="computer" min="0" max="100" required>
+
+        <br><br>
+
+        <label>Science:</label>
+        <input type="number" id="science" min="0" max="100" required>
+
+        <br><br>
+
+        <label>Business Studies:</label>
+        <input type="number" id="business" min="0" max="100" required>
+
+        <br><br>
+
+        <button type="submit">Calculate Grade</button>
+
+    </form>
+
+    <h2>STUDENT RESULTS</h2>
+
+    <div id="results">
+        <p>Results will appear here.</p>
+    </div>
+
+    <script>
+
+        // Get the form
+        document.getElementById("gradingForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            // Get student name
+            let name = document.getElementById("studentName").value;
+
+            // Get subject marks
+            let math = Number(document.getElementById("math").value);
+            let english = Number(document.getElementById("english").value);
+            let computer = Number(document.getElementById("computer").value);
+            let science = Number(document.getElementById("science").value);
+            let business = Number(document.getElementById("business").value);
+
+            // Validate marks
+            let marks = [math, english, computer, science, business];
+
+            if (marks.some(mark => mark < 0 || mark > 100)) {
+                alert("Marks must be between 0 and 100.");
+                return;
+            }
+
+            // Calculate total
+            let total = math + english + computer + science + business;
+
+            // Calculate average
+            let average = total / 5;
+
+            // Determine grade
+            let grade;
+            let remarks;
+
+            if (average >= 80) {
+                grade = "A";
+                remarks = "Excellent";
+            }
+            else if (average >= 70) {
+                grade = "B";
+                remarks = "Very Good";
+            }
+            else if (average >= 60) {
+                grade = "C";
+                remarks = "Good";
+            }
+            else if (average >= 50) {
+                grade = "D";
+                remarks = "Average";
+            }
+            else {
+                grade = "E";
+                remarks = "Fail";
+            }
+
+            // Display results
+            document.getElementById("results").innerHTML = `
+                <h3>Student Name: ${name}</h3>
+                <p>Total Marks: ${total} / 500</p>
+                <p>Average Marks: ${average.toFixed(2)}%</p>
+                <p>Grade: ${grade}</p>
+                <p>Remarks: ${remarks}</p>
+            `;
+
+        });
+
+    </script>
+
+</body>
+</html>
