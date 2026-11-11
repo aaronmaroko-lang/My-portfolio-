@@ -13,6 +13,33 @@ body {
     line-height: 1.6;
 }
 
+
+/* Welcome Paragraph Animation */
+
+.welcome-text {
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0;
+    animation: welcomeAnimation 2s ease-in-out forwards;
+}
+
+@keyframes welcomeAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* Header */
 header {
     background-color: #172554;
