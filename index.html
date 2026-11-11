@@ -1,31 +1,93 @@
-<!DOCTYPE htmL>
-<html>
-<head><title>MY PORTFOLIO</title>
-<link rel="stylesheet" href="Styles.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio | Aaron Maroko</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Styles.css">
+
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-<h1>MY PORTFOLIO</h1>
-<hr>
 
-<h2>Personal details</h2>
-<p><b>Name:</b>Aaron Maroko </p>
-<p><b>DOB:</b>06/06/2006</p>
-<p><b>Gender:</b>male</p>
-<p><b>Address:</b>Kitengela,Kenya</p>
-<p><b>Email:</b>sr2087447@gmail.com</p>
+    <header>
+        <h1>MY PORTFOLIO</h1>
+        <p>Welcome to my personal website</p>
+    </header>
 
-<hr>
-<h2>Education</h2>
-<p>TEAU-Diploma in Information Technology</p>
+    <nav>
+        <a href="#personal">Personal Details</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<h2>SYSTEM ANALYSIS,WED DESIGN,MIS,JAVA,OPERATING SYSTEMS,AI</h2>
-<p>1 Perform website development</p>
-<p>2 Develop computer program</p>
-<p>3 Perform system analysis and design</p>
-<p>4 Prgramming</p>
+    <main>
 
-<H2>Skills</h2>
-<P>HTML COMPUTER PACKAGES</p>
+        <section id="personal">
+            <h2>Personal Details</h2>
+
+            <p><b>Name:</b> Aaron Maroko</p>
+            <p><b>DOB:</b> 06/06/2006</p>
+            <p><b>Gender:</b> Male</p>
+            <p><b>Address:</b> Kitengela, Kenya</p>
+            <p><b>Email:</b> sr2087447@gmail.com</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <p>TEAU - Diploma in Information Technology</p>
+
+            <h3>Areas of Study</h3>
+            <ul>
+                <li>System Analysis</li>
+                <li>Web Design</li>
+                <li>Management Information Systems (MIS)</li>
+                <li>Java Programming</li>
+                <li>Operating Systems</li>
+                <li>Artificial Intelligence (AI)</li>
+            </ul>
+
+            <h3>Learning Objectives</h3>
+            <ul>
+                <li>Perform website development</li>
+                <li>Develop computer programs</li>
+                <li>Perform system analysis and design</li>
+                <li>Learn programming</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Computer Packages</li>
+                <li>Basic Programming</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: sr2087447@gmail.com</p>
+            <button id="messageButton">Click Me</button>
+            <p id="message"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aaron Maroko. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
