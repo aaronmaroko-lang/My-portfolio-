@@ -20,7 +20,7 @@ body {
     font-size: 20px;
     color: #ffffff;
     opacity: 0;
-    animation: welcomeAnimation 2s ease-in-out forwards;
+    animation: welcomeAnimation 4s ease-in-out forwards;
 }
 
 @keyframes welcomeAnimation {
